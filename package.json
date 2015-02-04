@@ -1,0 +1,48 @@
+{
+  "name": "gammabot",
+  "description": "Traces Lazo node module dependencies based on package.json meta data.",
+  "version": "0.0.0",
+  "main": "index.js",
+  "keywords": [
+    "lazojs",
+    "bundler",
+    "rjs",
+    "optimizer"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/lazojs/gammabot/blob/master/LICENSE"
+    }
+  ],
+  "author": {
+    "name": "Jason Strimpel",
+    "email": "jstrimpel@gmail.com"
+  },
+  "bugs": {
+    "web": "https://github.com/lazojs/gammabot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lazojs/gammabot.git"
+  },
+  "github": "https://github.com/lazojs/gammabot",
+  "scripts": {
+    "test": "gulp ci"
+  },
+  "maintainers": [
+    {
+      "name": "Jason Strimpel",
+      "email": "jstrimpel@gmail.com"
+    }
+  ],
+  "devDependencies": {
+    "gulp": "3.8.8",
+    "gulp-mocha": "1.0.0",
+    "chai": "1.9.1"
+  },
+  "dependencies": {
+      "node-dir": "0.1.5",
+      "lodash": "3.1.0"
+  }
+}
