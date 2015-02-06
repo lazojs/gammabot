@@ -37,7 +37,7 @@ module.exports = function (modulesDir, callback) {
             var groupedBy;
 
             retVal.modules = modules.map(function (module) {
-                module.path = files[module.index];
+                module.path = files[module.index].substr(0, files[module.index].lastIndexOf(path.sep));
                 delete module.index;
                 return module;
             });
