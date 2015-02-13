@@ -1,12 +1,26 @@
 var dir = require('node-dir');
 var path = require('path');
 var _ = require('lodash');
+var defaults = {
+    excludeDir: /test/,
+    match: /package.json$/
+};
 
-module.exports = function (modulesDir, callback) {
+function mapOptions(options) {
+    return {
+        match: options.include,
+        matchDir: options.includeDir,
+        exclude: options.exclude,
+        excludeDir: options.excludeDir
+    };
+}
+
+module.exports = function (modulesDir, options, callback) {
     var index = 0;
     var modules = [];
 
-    dir.readFiles(path.resolve(modulesDir), { match: /package.json$/ }, function (err, content, next) {
+    options = _.defaults(options || {}, defaults);
+    dir.readFiles(path.resolve(modulesDir), mapOptions(options), function (err, content, next) {
         if (err) {
             callback(err, null);
         }

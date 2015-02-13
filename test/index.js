@@ -4,7 +4,7 @@ var chai = require('chai');
 describe('gammabot', function () {
 
     it('should get module data for lazo node modules', function (done) {
-        gammabot('test/application/node_modules', function (err, list) {
+        gammabot('test/application/node_modules', null, function (err, list) {
             if (err) {
                 throw err;
             }
