@@ -3,7 +3,7 @@ var path = require('path');
 var _ = require('lodash');
 var defaults = {
     excludeDir: /test/,
-    match: /package.json$/
+    include: /package.json$/
 };
 
 function mapOptions(options) {
@@ -18,7 +18,6 @@ function mapOptions(options) {
 module.exports = function (modulesDir, options, callback) {
     var index = 0;
     var modules = [];
-
     options = _.defaults(options || {}, defaults);
     dir.readFiles(path.resolve(modulesDir), mapOptions(options), function (err, content, next) {
         if (err) {
