@@ -1,7 +1,7 @@
 {
   "name": "gammabot",
   "description": "Traces Lazo node module dependencies based on package.json meta data.",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "main": "index.js",
   "keywords": [
     "lazojs",
