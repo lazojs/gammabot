@@ -3,7 +3,10 @@ var path = require('path');
 var _ = require('lodash');
 var defaults = {
     excludeDir: /test/,
-    include: /^package\.json$/
+    include: /^package\.json$/,
+    includeResolver: function (packageJson) {
+        return packageJson.lazo;
+    }
 };
 
 function mapOptions(options) {
@@ -30,7 +33,7 @@ module.exports = function (modulesDir, options, callback) {
             callback(e, null);
         }
 
-        if (content.lazo) {
+        if (options.includeResolver(content)) {
             modules.push({
                 name: content.name,
                 version: content.version,
