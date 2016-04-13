@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "dependencies": {
         "cmp-a": "1.2.3",
-        "cmp-b": "2.0.0"
+        "cmp-b": "2.0.0",
+        "bad-package-json": "1.0.0"
     },
     "lazo": "dist"
 }

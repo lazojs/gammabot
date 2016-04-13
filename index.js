@@ -3,7 +3,7 @@ var path = require('path');
 var _ = require('lodash');
 var defaults = {
     excludeDir: /test/,
-    include: /package.json$/
+    include: /^package\.json$/
 };
 
 function mapOptions(options) {
